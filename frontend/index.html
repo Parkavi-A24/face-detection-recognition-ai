@@ -1,0 +1,32 @@
+DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection and Recognition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Face Detection & Recognition</h1>
+        <div class="card">
+            <h2>Upload Image</h2>
+            <input type="file" id="imageInput" accept="image/*">
+            <button id="detectBtn">Detect Faces</button>
+            <div id="result"></div>
+        </div>
+        <div class="card">
+            <h2>Train Recognizer</h2>
+            <form id="trainForm">
+                <label>Person Name</label>
+                <input type="text" id="personName" required>
+                <label>Images (multiple allowed)</label>
+                <input type="file" id="trainImages" accept="image/*" multiple required>
+                <button type="submit">Train Model</button>
+            </form>
+            <div id="trainStatus"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
